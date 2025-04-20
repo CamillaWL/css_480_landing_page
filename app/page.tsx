@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import confetti from 'canvas-confetti';
 
 export default function Home() {
   const [interests, setInterests] = useState([
@@ -14,6 +15,13 @@ export default function Home() {
   const shuffleInterests = () => {
     const shuffled = [...interests].sort(() => Math.random() - 0.5);
     setInterests(shuffled);
+
+    // 🎉 Fire the confetti!
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
   };
 
   return (
@@ -46,7 +54,7 @@ export default function Home() {
           onClick={shuffleInterests}
           className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
-          Shuffle Interests
+          Shuffle Interests 🎉
         </button>
       </div>
     </div>
