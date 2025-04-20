@@ -17,33 +17,38 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-blue-100 text-gray-800 min-h-screen grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-4xl font-bold mb-4">Welcome to My Website!</h1>
-      <p className="mb-4 text-lg">
-        Hi! I'm Camilla, a student passionate about technology, language learning, and creativity.
-      </p>
+    <div className="bg-blue-100 text-gray-800 min-h-screen flex items-center justify-center p-8 sm:p-20">
+      <div className="flex flex-col items-center sm:items-start max-w-md w-full space-y-6 text-center sm:text-left">
+        <h1 className="text-4xl font-bold">Welcome to My Website!</h1>
 
-      <Image
-        src="/profile.jpg"
-        alt="Profile Picture"
-        width={200}
-        height={200}
-        className="rounded-full mb-6"
-      />
+        <p className="text-lg">
+          Hi! I'm Camilla, a student passionate about technology, language learning, and creativity.
+        </p>
 
-      <h2 className="text-2xl font-semibold mb-2">My Interests</h2>
-      <ul className="mb-4">
-        {interests.map((item, index) => (
-          <li key={index} className="text-lg">{item}</li>
-        ))}
-      </ul>
+        <Image
+          src="/profile.jpg"
+          alt="Profile Picture"
+          width={200}
+          height={200}
+          className="rounded-full"
+        />
 
-      <button
-        onClick={shuffleInterests}
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-      >
-        Shuffle Interests
-      </button>
+        <div>
+          <h2 className="text-2xl font-semibold mb-2">My Interests</h2>
+          <ul className="space-y-1">
+            {interests.map((item, index) => (
+              <li key={index} className="text-lg">{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <button
+          onClick={shuffleInterests}
+          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+        >
+          Shuffle Interests
+        </button>
+      </div>
     </div>
   );
 }
