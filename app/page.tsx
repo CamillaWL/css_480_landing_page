@@ -17,7 +17,7 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-blue-100 min-h-screen grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-blue-100 text-gray-800 min-h-screen grid grid-rows-[20px_1fr_20px] items-center justify-items-center p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <h1 className="text-4xl font-bold mb-4">Welcome to My Website!</h1>
       <p className="mb-4 text-lg">
         Hi! I'm Camilla, a student passionate about technology, language learning, and creativity.
