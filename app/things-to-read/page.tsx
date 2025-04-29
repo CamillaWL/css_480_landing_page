@@ -16,16 +16,13 @@ export default function ThingsToRead() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-100 via-white to-green-50 text-gray-800 flex flex-col">
-      {/* Navbar */}
       <nav className="bg-green-900 text-white p-4 flex justify-center gap-8 shadow-md">
         <Link href="/" className="hover:underline focus:outline-yellow-300">Home</Link>
         <Link href="/things-to-read" className="hover:underline focus:outline-yellow-300">Things to Read</Link>
       </nav>
 
-      {/* Content */}
       <main className="px-6 py-12 max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6">Things to Read</h1>
-        <p className="text-center text-lg text-gray-600 mb-10">Here are some of my favorite websites about plants, cooking, and working out.</p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {links.map((link, i) => (
@@ -43,10 +40,8 @@ export default function ThingsToRead() {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="bg-gray-100 p-4 text-center text-sm">
         <p><strong>Keyboard Access:</strong> Tab through links, press Enter to open. All links show visible focus.</p>
-        <p><strong>Usability Focus:</strong> Navigation and resources are fully accessible with keyboard support and consistent visual cues.</p>
       </footer>
     </div>
   );
