@@ -7,32 +7,22 @@ import confetti from 'canvas-confetti';
 
 export default function Home() {
   const [interests, setInterests] = useState([
-    'Cooking',
-    'Traveling',
-    'Reading',
-    'Shopping',
+    'Cooking', 'Traveling', 'Reading', 'Shopping'
   ]);
 
   const shuffleInterests = () => {
     const shuffled = [...interests].sort(() => Math.random() - 0.5);
     setInterests(shuffled);
-
-    confetti({
-      particleCount: 100,
-      spread: 60,
-      origin: { y: 0.6 },
-    });
+    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 via-white to-blue-50 text-gray-800 flex flex-col">
-      {/* Navbar */}
       <nav className="bg-blue-900 text-white p-4 flex justify-center gap-8 shadow-md">
         <Link href="/" className="hover:underline focus:outline-yellow-300">Home</Link>
         <Link href="/things-to-read" className="hover:underline focus:outline-yellow-300">Things to Read</Link>
       </nav>
 
-      {/* Main Content */}
       <main className="flex-grow flex flex-col items-center justify-center px-4 py-12 text-center">
         <h1 className="text-4xl font-bold mb-4">Welcome to My Website!</h1>
         <p className="text-lg max-w-xl mb-6">
@@ -64,10 +54,8 @@ export default function Home() {
         </button>
       </main>
 
-      {/* Footer */}
       <footer className="bg-gray-100 p-4 text-center text-sm">
         <p><strong>Keyboard Access:</strong> Use Tab and Enter to navigate and activate elements.</p>
-        <p><strong>Usability Focus:</strong> All interactions are fully keyboard accessible with visual focus indicators.</p>
       </footer>
     </div>
   );
