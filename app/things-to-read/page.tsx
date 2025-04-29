@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function ThingsToRead() {
   const links = [
-    { title: 'Plant Care 101 - The Sill', url: 'https://www.thesill.com/blogs/care-miscellaneous/plant-care-101' },
+    { title: 'Plant Care 101 - The Sill', url: 'https://www.thesill.com/collections/plant-care' },
     { title: 'House Plant Journal', url: 'https://www.houseplantjournal.com/' },
     { title: 'Garden Design - Houseplants', url: 'https://www.gardendesign.com/houseplants/' },
     { title: 'Serious Eats', url: 'https://www.seriouseats.com/' },
